@@ -1,0 +1,12 @@
+<h1>Bienvenidos a my Tasks</h1>
+
+<img src="https://store-images.s-microsoft.com/image/apps.19507.9007199266251373.aee1de36-9bb3-4d63-b820-6f2b930a90b1.d28bb5c8-80df-4e85-8602-2d36301d1613?mode=scale&q=90&h=200&w=200&background=%233a6499" alt="">
+
+<ol>
+<% @tasks.each do |task| %>
+  <li> <%= link_to task.title , task_path(task)%> </li>
+<%end%>
+</ol>
+
+
+<%= link_to "Crear nueva tarea", new_task_path %>
