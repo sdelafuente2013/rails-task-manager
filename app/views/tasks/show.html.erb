@@ -2,6 +2,6 @@
 <h3><%=@task_find.details%></h3>
 <h4><%=@task_find.completed%></h4>
 
-<%= button_to 'Editar' , edit_task_path(@task_find)%>
+<%= button_to 'Editar' , edit_task_path(@task_find), method: :get %>
 <%= button_to "Eliminar", task_path(@task_find), method: :delete %><br><br>
 <%= link_to "Volver a la lista ..", tasks_path %>
